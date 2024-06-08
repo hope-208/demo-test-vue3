@@ -1,85 +1,57 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <el-aside class="aside-menu">
+    <el-menu :default-active="3" class="menu-vertical" :background-color="bgColorMenu"
+      :active-text-color="activeTextColor" :text-color="menuTextColor" router>
+      <el-menu-item class="menu__item-logo" index="1" route="/">
+        <template #title>
+          <el-image class="menu__logo" :src="'../src/assets/image/logo.svg'" :fit="cover" />
+        </template>
+      </el-menu-item>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <el-menu-item v-for="(item, key) in menuItems" :key="key" class="menu__item" :index="item.idx"
+        :route="item.routePath">
+        <template #title>
+          <icon :name="item.iconName" class="menu__item_icon" />
+          <el-text class="navigation">{{ item.title }}</el-text>
+        </template>
+      </el-menu-item>
+    </el-menu>
 
-  <RouterView />
+  </el-aside>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script>
+import Icon from '@/components/CustomIcon.vue'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+export default {
+  components: { Icon },
+  data() {
+    return {
+      bgColorMenu: 'var(--el-color-primary-dark)',
+      activeTextColor: 'var(--el-color-text-white)',
+      menuTextColor: 'var(--el-color-text-white-45)',
+      menuItems: [
+        {
+          idx: 2,
+          title: 'Profile',
+          routePath: '/profile',
+          iconName: 'user'
+        },
+        {
+          idx: 3,
+          title: 'Vechicles',
+          routePath: '/vechicles',
+          iconName: 'rim'
+        },
+        {
+          idx: 4,
+          title: 'Setting',
+          routePath: '/setting',
+          iconName: 'settings'
+        }
+      ]
+    }
   }
 }
-</style>
+</script>
