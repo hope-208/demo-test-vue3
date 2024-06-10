@@ -1,56 +1,31 @@
 <template>
+  <el-container>
+    <el-aside class="aside-menu">
+      <menu-collaps />
+    </el-aside>
+    <el-container class="page">
+      <header class="header">
+        <breadcrumb-header />
+        <nav-bar />
+      </header>
+      <main class="main">
+        <router-view />
+      </main>
+      <footer></footer>
+    </el-container>
 
-  <el-aside class="aside-menu">
-    <el-menu :default-active="3" class="menu-vertical" :background-color="bgColorMenu"
-      :active-text-color="activeTextColor" :text-color="menuTextColor" router>
-      <el-menu-item class="menu__item-logo" index="1" route="/">
-        <template #title>
-          <el-image class="menu__logo" :src="'../src/assets/image/logo.svg'" :fit="cover" />
-        </template>
-      </el-menu-item>
-
-      <el-menu-item v-for="(item, key) in menuItems" :key="key" class="menu__item" :index="item.idx"
-        :route="item.routePath">
-        <template #title>
-          <icon :name="item.iconName" class="menu__item_icon" />
-          <el-text class="navigation">{{ item.title }}</el-text>
-        </template>
-      </el-menu-item>
-    </el-menu>
-
-  </el-aside>
+  </el-container>
 </template>
 
 <script>
-import Icon from '@/components/CustomIcon.vue'
+import MenuCollaps from '@/components/MenuCollaps.vue'
+import BreadcrumbHeader from '@/components/BreadcrumbHeader.vue'
+import NavBar from '@/components/NavBar.vue'
 
 export default {
-  components: { Icon },
+  components: { MenuCollaps, BreadcrumbHeader, NavBar },
   data() {
     return {
-      bgColorMenu: 'var(--el-color-primary-dark)',
-      activeTextColor: 'var(--el-color-text-white)',
-      menuTextColor: 'var(--el-color-text-white-45)',
-      menuItems: [
-        {
-          idx: 2,
-          title: 'Profile',
-          routePath: '/profile',
-          iconName: 'user'
-        },
-        {
-          idx: 3,
-          title: 'Vechicles',
-          routePath: '/vechicles',
-          iconName: 'rim'
-        },
-        {
-          idx: 4,
-          title: 'Setting',
-          routePath: '/setting',
-          iconName: 'settings'
-        }
-      ]
     }
   }
 }

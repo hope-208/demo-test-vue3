@@ -1,5 +1,5 @@
 <template>
- <component :is="icon" class="fill-current" />
+ <component :is="icon" class="menu__item_icon" />
 </template>
 
 
