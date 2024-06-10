@@ -21,17 +21,21 @@
 
   </el-button>
  </div>
+
+ <pagination-panel />
 </template>
 
 <script>
 import SearchPanel from '@/components/SearchPanel.vue'
 import Icon from '@/components/CustomIcon.vue'
+import PaginationPanel from '@/components/PaginationPanel.vue'
 
 export default {
  name: 'VechiclesView',
  components: {
   SearchPanel,
-  Icon
+  Icon,
+  PaginationPanel
  },
  data() {
   return {
