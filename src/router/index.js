@@ -5,8 +5,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'main',
-      component: () => import('@/views/MainView.vue')
+      name: 'home',
+      meta: {
+        title: 'Home'
+      },
+      component: () => import('@/views/HomeView.vue')
     },
     {
       path: '/profile',
@@ -36,8 +39,13 @@ const router = createRouter({
       path: '/not-found',
       name: '404',
       meta: {
-        title: 'Not found'
+        title: 'Not found error 404'
       },
+      component: () => import('@/views/NotFoundView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/not-found',
       component: () => import('@/views/NotFoundView.vue')
     }
   ]

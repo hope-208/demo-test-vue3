@@ -11,7 +11,6 @@
       <main class="main">
         <router-view />
       </main>
-      <footer></footer>
     </el-container>
 
   </el-container>

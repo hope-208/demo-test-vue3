@@ -1,8 +1,14 @@
 <template>
-  <div></div>
-  
+  <el-row class="not-found">
+    <icon name="404" class="icon__not-found" />
+  </el-row>
 </template>
 
-<script setup>
-// import TheWelcome from '../components/TheWelcome.vue'
+<script>
+import Icon from '@/components/CustomIcon.vue'
+
+export default {
+  name: 'NotFound',
+  components: { Icon }
+}
 </script>

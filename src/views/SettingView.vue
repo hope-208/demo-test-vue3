@@ -1,8 +1,12 @@
 <template>
-  <div></div>
-  
+  <el-text tag="h2" class="title-h2">
+    Here will be the content of the page "Settings".
+  </el-text>
+
 </template>
 
-<script setup>
-// import TheWelcome from '../components/TheWelcome.vue'
+<script>
+export default {
+  name: 'SettingView'
+}
 </script>

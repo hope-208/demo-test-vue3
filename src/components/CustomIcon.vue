@@ -1,5 +1,5 @@
 <template>
- <component :is="icon" class="menu__item_icon" />
+ <component :is="icon" class="icon" />
 </template>
 
 
