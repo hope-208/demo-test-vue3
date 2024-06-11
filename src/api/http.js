@@ -6,8 +6,6 @@ export const Request = axios.create({
 })
 Request.interceptors.request.use((config) => { return config })
 Request.interceptors.response.use((response) => {
-
- console.log('%c%s', 'color: #00bf00', response);
  return response
 }, (error) => {
  if (error.response.status === 422) { return error.response }

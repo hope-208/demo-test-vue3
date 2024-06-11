@@ -43,11 +43,6 @@ export default {
  name: 'AutoCard',
  components: { Icon },
  props: ['itemData'],
- mounted() {
-
-  console.log('%c%s', 'color: #e50000', this.carItem.photo)
-
- },
  data() {
   return {
    carItem: {
