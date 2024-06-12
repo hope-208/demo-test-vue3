@@ -2,6 +2,11 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+## [Link to the market in Figma](https://www.figma.com/design/7uTwLfLxAsEKxZUKmFL4s0/Demo-test?node-id=2274-2262&t=egivTsjcBJ6WLxfu-0)
+
+## Access to the site:
+[https://hope-208.github.io/demo-test-vue3/vechicles](https://hope-208.github.io/demo-test-vue3/vechicles)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
@@ -26,16 +31,4 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

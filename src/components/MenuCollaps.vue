@@ -3,7 +3,7 @@
   :text-color="menuTextColor" router>
   <el-menu-item class="menu__item-logo" index="1" route="/">
    <template #title>
-    <el-image class="menu__logo" :src="'../src/assets/image/logo.svg'" fit="contain" />
+    <el-image class="menu__logo" src="./public/logo.svg" fit="contain" />
    </template>
   </el-menu-item>
 

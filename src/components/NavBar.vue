@@ -5,7 +5,7 @@
   </el-button>
 
   <div class="user-info">
-   <el-avatar class="user-info__avatar" src="../src/assets/image/Photo.png" fit="contain" />
+   <el-avatar class="user-info__avatar" src="./src/assets/image/Photo.png" fit="contain" />
    <el-text class="user-info__name text-medium-3">John Doe</el-text>
   </div>
 
