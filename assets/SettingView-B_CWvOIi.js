@@ -1,1 +1,0 @@
-import{_ as t,c as a,w as o,E as n,o as s,a as c}from"./index-B2ra2j89.js";const r={name:"SettingView"};function _(i,l,p,f,x,d){const e=n;return s(),a(e,{tag:"h2",class:"title-h2"},{default:o(()=>[c(' Here will be the content of the page "Settings". ')]),_:1})}const g=t(r,[["render",_]]);export{g as default};
