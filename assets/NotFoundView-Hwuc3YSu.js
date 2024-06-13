@@ -1,0 +1,1 @@
+import{_ as t,b as e,r as c,c as s,w as a,g as _,o as r,d as p}from"./index-CnNvsLIR.js";/* empty css               */const d={name:"NotFound",components:{Icon:e}};function i(m,f,l,u,w,$){const o=c("icon"),n=_;return r(),s(n,{class:"not-found"},{default:a(()=>[p(o,{name:"404",class:"icon__not-found"})]),_:1})}const h=t(d,[["render",i]]);export{h as default};
