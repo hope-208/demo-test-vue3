@@ -192,10 +192,11 @@ label {
   border-radius: 20px 0 0;
 }
 
-.menu__logo>.el-image__inner {
+.menu__logo.icon {
   width: 123px;
   height: 24px;
   margin: 30px 77px 102px 56px;
+  object-fit: contain;
   cursor: pointer;
 }
 
@@ -310,6 +311,7 @@ label {
   width: 46px;
   height: 46px;
   border-radius: 23px;
+  object-fit: contain;
   background-color: transparent;
 }
 

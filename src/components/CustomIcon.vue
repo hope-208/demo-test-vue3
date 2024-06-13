@@ -10,7 +10,7 @@ const props = defineProps({
  name: {
   type: String,
   required: true,
- },
+ }
 });
 
 const icon = defineAsyncComponent(() =>
