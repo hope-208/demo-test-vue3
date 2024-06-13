@@ -1,0 +1,1 @@
+import{_ as t,c as o,w as a,h as c,o as s,b as r}from"./index-DS3Jpz9k.js";const n={name:"ProfileView"};function l(_,i,f,p,h,x){const e=c;return s(),o(e,{tag:"h2",class:"title-h2"},{default:a(()=>[r(' Here will be the content of the page "Profile". ')]),_:1})}const m=t(n,[["render",l]]);export{m as default};
